@@ -9,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class NavBarComponent {
 
+  flagNav: boolean = false
+
+  onClickFlag() {
+    this.flagNav = !this.flagNav;
+    console.log("Olaf", this.flagNav);
+
+  }
+
 }

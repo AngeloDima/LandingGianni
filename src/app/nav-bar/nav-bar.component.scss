@@ -1,6 +1,93 @@
 nav{
   width: 1000px;
-  height: 70px;
   background-color: blue;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+
+  a{
+    color: white;
+    text-decoration: none;
+    padding: 12px 15px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+  }
+  a:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+  }
+}
+
+.hamburger {
+  height: 50px;
+  width: 50px;
+  transform: 0.2s;
+  position: relative;
+  display: none;
+}
+.hamburger .checkbox {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+.line {
+  transition: 0.5s;
+  stroke-width: 6px;
+  stroke: black;
+}
+.lineTop {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 25;
+}
+.lineBottom {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 60;
+}
+.lineMid {
+  stroke-dasharray: 40 40;
+}
+.hamburger .checkbox:checked + svg .line {
+  stroke: crimson;
+}
+.hamburger .checkbox:checked + svg .lineTop {
+  stroke-dashoffset: 0;
+  transform-origin: left;
+  transform: rotateZ(45deg) translate(-7px, -5px);
+}
+.hamburger .checkbox:checked + svg .lineMid {
+  stroke-dashoffset: 40;
+}
+.hamburger .checkbox:checked + svg .lineBottom {
+  stroke-dashoffset: 0;
+  transform-origin: left;
+  transform: rotateZ(-45deg) translate(-5px, 5px);
+}
+
+.openMenu{
+  width: 90%;
+  display: flex;
+  background-color: red;
+  margin: auto;
+  flex-direction: column;
+}
+
+
+@media screen and (max-width: 1100px){
+  nav{
+    width: 800px;
+  }
+}
+
+@media screen and (max-width: 950px){
+  nav{
+    width: 800px;
+    display: none;
+  }
+  .hamburger{
+    display: block;
+  }
 }
