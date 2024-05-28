@@ -1,6 +1,80 @@
 .container{
   width: 1300px;
-  height: 600px;
-  background-color: blanchedalmond;
+  // height: 600px;
+  background-color: rgb(24 24 24 / 20%);
   margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 10px;
+  .sx{
+    width: 50%;
+    height: 100%;
+    background-color: rgba(28, 28, 28, 0.296);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px ;
+    margin-left: 10px;
+
+    h1{
+      color: white;
+      font-size: 5rem;
+      font-weight: 800;
+    }
+    h3{
+      color: rgb(200, 200, 200);
+      font-size: 2.7rem;
+      margin-bottom: 30px;
+    }
+    p{
+      color: rgb(173, 173, 173);
+      font-size: 1.2rem;
+      letter-spacing: 1.2px;
+    }
+  }
+  .dx{
+    width: 35%;
+    img{
+      width: 100%;
+    }
+  }
 }
+
+
+
+
+@media screen and (max-width: 1300px){
+  .container{
+    width: 1100px;
+
+  }
+}
+
+
+@media screen and (max-width: 1100px){
+  .container{
+    width: 950px;
+    flex-direction: column-reverse;
+    .sx{
+      width: 100%;
+    }
+    .dx{
+      width: 50%;
+      img{
+        position: relative;
+        right: 55px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .container{
+    width: 850px;
+
+  }
+}
+
+

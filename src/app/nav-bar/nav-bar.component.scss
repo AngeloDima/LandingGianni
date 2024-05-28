@@ -1,11 +1,15 @@
 nav{
   width: 1000px;
-  background-color: blue;
-  margin: auto;
+  background-color: #ffffff1b;
   display: flex;
   justify-content: space-between;
   padding: 10px;
   font-family: "Roboto", sans-serif;
+  backdrop-filter: blur(4px);
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
 
   a{
     color: white;
